@@ -1,8 +1,13 @@
 package com.lvanyi.myday.Model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ItemModel {
+/**
+ * 每一条数据model类
+ * 序列化用来传递数据
+ */
+public class ItemModel implements Serializable {
     private int id;
     private Date startDate;
     private String title;

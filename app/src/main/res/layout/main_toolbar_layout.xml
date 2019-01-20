@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lvanyi.myday.Widget.MainToolBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:fitsSystemWindows="true"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btn_left_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ripple_bg"
+            android:src="@drawable/goback" />
+
+        <TextView
+            android:id="@+id/tv_title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="新建日子"
+            android:textColor="#515151"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btn_right_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:background="#00000000"
+            android:src="@drawable/check_circle" />
+    </RelativeLayout>
+
+</com.lvanyi.myday.Widget.MainToolBar>

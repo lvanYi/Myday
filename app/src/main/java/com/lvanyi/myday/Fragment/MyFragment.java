@@ -16,7 +16,7 @@ import com.lvanyi.myday.Activity.MainActivity;
 import com.lvanyi.myday.Model.ItemModel;
 import com.lvanyi.myday.MyrecyclerViewAdapter;
 import com.lvanyi.myday.R;
-import com.lvanyi.myday.ShowDayActivity;
+import com.lvanyi.myday.Activity.ShowDayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class MyFragment extends Fragment {
 
     private List<ItemModel> list = new ArrayList<ItemModel>();
     private MyrecyclerViewAdapter myrecyclerViewAdapter;
-    getItemData getItemData;
+    // getItemData getItemData;
 
 
     @Override
@@ -49,15 +49,9 @@ public class MyFragment extends Fragment {
             @Override
             public void onItemClick(int position, ItemModel itemModel) {
                 Intent intent = new Intent(getActivity().getApplicationContext(), ShowDayActivity.class);
-                //Bundle bundle = new Bundle();
-                //bundle.putString("a", itemModel.getTitle());
-                intent.putExtra("title", itemModel.getTitle());
-                intent.putExtra("remark", itemModel.getRemark());
-                intent.putExtra("type", itemModel.getType());
-                intent.putExtra("startdate", itemModel.getStartDate().toString());
-                //intent.putExtras(bundle);
+                intent.putExtra("this_item",itemModel);
                 getActivity().startActivity(intent);
-               //getItemData.SendData(itemModel);
+
             }
         });
 
@@ -83,7 +77,7 @@ public class MyFragment extends Fragment {
     /**
      * 向ShowDayActivity传递书籍，回调接口
      */
-    public interface getItemData{
+   /* public interface getItemData{
         public void SendData(ItemModel itemModel);
-    }
+    }*/
 }

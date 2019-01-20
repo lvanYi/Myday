@@ -19,7 +19,7 @@
         <activity
             android:name=".Activity.AddItemActivity"
             android:label="@string/title_activity_main2" />
-        <activity android:name=".ShowDayActivity"></activity>
+        <activity android:name=".Activity.ShowDayActivity"></activity>
     </application>
 
 </manifest>

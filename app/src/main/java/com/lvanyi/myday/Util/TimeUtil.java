@@ -39,7 +39,10 @@ public class TimeUtil {
      *
      * @param startDate
      * @param endDate
-     * @return string类型时间差
+     * @return string类型时间差，包括天数和描述
+     *         小于0：返回“已过去x天”
+     *         大于0：返回“还剩x天”
+     *         等于0：返回“就是今天”
      */
     public static String getnewDateDiff(Date startDate, Date endDate) {
 
@@ -65,6 +68,39 @@ public class TimeUtil {
         } else {
             int days = (int) ((fromDate - toDate) / (1000 * 60 * 60 * 24));
             return "还剩" + String.valueOf(days) + "天";
+        }
+    }
+
+    /**
+     * 计算日期差
+     * @param startDate
+     * @param endDate
+     * @return string类型时间差，只包括天
+     */
+    public static String getDateDiffToOnlyNum(Date startDate, Date endDate) {
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String fromDays = simpleDateFormat.format(startDate);
+        String toDayS = simpleDateFormat.format(endDate);
+
+        long fromDate = 0;
+        long toDate = 0;
+
+        try {
+            fromDate = simpleDateFormat.parse(fromDays).getTime();
+            toDate = simpleDateFormat.parse(toDayS).getTime();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        if (fromDate < toDate) {
+            int days = (int) ((toDate - fromDate) / (1000 * 60 * 60 * 24));
+            return String.valueOf(days);
+        } else if (fromDate == toDate) {
+            return "0";
+        } else {
+            int days = (int) ((fromDate - toDate) / (1000 * 60 * 60 * 24));
+            return String.valueOf(days);
         }
     }
 }

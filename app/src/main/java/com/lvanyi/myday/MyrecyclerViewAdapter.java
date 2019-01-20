@@ -87,9 +87,10 @@ public class MyrecyclerViewAdapter extends RecyclerView.Adapter<MyrecyclerViewAd
             this.mTitle = mTitle;
         }*/
         public void setDatas(List<ItemModel> list, int position) {
+            list.get(position).setDateDiff(TimeUtil.getnewDateDiff(list.get(position).getStartDate(),new Date(System.currentTimeMillis())));
             mTitle.setText(list.get(position).getTitle());
             mRemark.setText(list.get(position).getRemark());
-            mDays.setText(TimeUtil.getnewDateDiff(list.get(position).getStartDate(),new Date(System.currentTimeMillis())));
+            mDays.setText(list.get(position).getDateDiff());
             Log.d("____________", "setDatas: "+list.get(position).getStartDate()+"_______"+new Date(System.currentTimeMillis()));
         }
 

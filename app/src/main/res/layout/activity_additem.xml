@@ -13,7 +13,8 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="-16dp">
+        android:layout_marginLeft="-16dp"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -23,9 +24,9 @@
                 android:id="@+id/btn_goback_additem"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/ripple_bg"
                 android:src="@drawable/goback" />
 
@@ -42,8 +43,8 @@
                 android:id="@+id/btn_ok_additem"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:layout_marginRight="8dp"
                 android:background="#00000000"
                 android:src="@drawable/check_circle" />
@@ -54,42 +55,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/toolbar_additem">
+        android:layout_below="@+id/toolbar_additem"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="28dp"
             android:text="在此记下你的日子"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
+
         <EditText
             android:id="@+id/edt_title_additem"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="12dp"
             android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
-            android:hint="日子"
-            />
+            android:hint="日子" />
+
         <EditText
             android:id="@+id/edt_remark_additem"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="12dp"
             android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
-            android:hint="备注"
-            />
-       <DatePicker
-           android:id="@+id/dtp_pickerday_additem"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:datePickerMode="spinner"
-           android:calendarViewShown="false"
-           android:layout_gravity="center"
-           android:gravity="center">
-       </DatePicker>
+            android:hint="备注" />
+
+        <DatePicker
+            android:id="@+id/dtp_pickerday_additem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:gravity="center"></DatePicker>
     </LinearLayout>
 
 
