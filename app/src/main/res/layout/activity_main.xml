@@ -9,8 +9,8 @@
     <Toolbar
         android:id="@+id/toolbar_main"
         android:layout_width="match_parent"
-        android:layout_marginLeft="-16dp"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="-16dp">
 
         <ImageButton
             android:id="@+id/imb_add_mian"
@@ -20,30 +20,28 @@
             android:background="@drawable/ripple_bg"
             android:scaleType="fitCenter"
             android:src="@mipmap/icon" />
+
         <TextView
             android:id="@+id/tv_mian_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="新建你的日子"
             android:layout_marginLeft="8dp"
-            android:textSize="16sp"
-            />
+            android:text="新建你的日子"
+            android:textSize="16sp" />
     </Toolbar>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_main"
-        android:layout_above="@+id/notification_main">
-    </android.support.v4.view.ViewPager>
-
+        android:layout_above="@+id/notification_main"
+        android:layout_below="@+id/toolbar_main"></android.support.v4.view.ViewPager>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/notification_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         app:menu="@menu/navigation" />
 </RelativeLayout>

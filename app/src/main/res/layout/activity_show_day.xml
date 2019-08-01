@@ -7,6 +7,17 @@
     android:orientation="vertical"
     tools:context=".Activity.ShowDayActivity">
 
+    <com.lvanyi.myday.Widget.MainToolBar
+        android:id="@+id/tlb_show_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:fitsSystemWindows="true"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+       >
+    </com.lvanyi.myday.Widget.MainToolBar>
+
     <TextView
         android:id="@+id/show_day_title"
         android:layout_width="wrap_content"
@@ -49,6 +60,11 @@
         android:textSize="30sp"
         android:text="5"
         />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/mgv"/>
 
 
 </LinearLayout>

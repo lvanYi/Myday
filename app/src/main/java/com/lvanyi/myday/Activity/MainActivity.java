@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        System.out.println("111111");
+
         mToolbar=findViewById(R.id.toolbar_main);
         mViewPager  = findViewById(R.id.viewpager_main);
         mBottomNavigationView =findViewById(R.id.notification_main);
@@ -110,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
             public void transformPage(@NonNull View page, float position) {
                 int pageWidth = page.getWidth();
                 int pageHeight = page.getHeight();
-
                 /**
                  * position：这个position不是手指滑动的坐标位置，而是滑动页面相对于手机屏幕的位置，
                  * 范围位：[-1,1],[-1,0)表示页面向左滑出屏幕，0表示处于中心（即当前显示）的页面，
@@ -127,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         page.setTranslationX(-horzMargin + vertMargin / 2);
                     }
-
                     //缩放
                     page.setScaleX(scaleFactor);
                     page.setScaleY(scaleFactor);
@@ -136,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
                     page.setAlpha(MIN_ALPHA +
                             (scaleFactor - MIN_SCALE) /
                                     (1 - MIN_SCALE) * (1 - MIN_ALPHA));
-
                 } else {
                     //表示已经滑出屏幕（右边）
                     page.setAlpha(0);

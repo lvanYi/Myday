@@ -24,7 +24,7 @@ import java.util.List;
 public class MyFragment extends Fragment {
     private RecyclerView recyclerView;
 
-    private List<ItemModel> list = new ArrayList<ItemModel>();
+    private List<ItemModel> list = new ArrayList<>();
     private MyrecyclerViewAdapter myrecyclerViewAdapter;
     // getItemData getItemData;
 
